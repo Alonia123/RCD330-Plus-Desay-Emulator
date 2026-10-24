@@ -1,0 +1,13 @@
+*.bin
+*.img
+*.ext2
+*.kzb
+dump/
+update/
+__pycache__/
+*.pyc
+*.so
+*.o
+*.ppm
+*.png
+*.log
