@@ -12,6 +12,9 @@ Whether you're experimenting with system services, changing application behavior
 modifying startup scripts or investigating firmware internals,
 you can validate your changes before attempting to flash them onto the real head unit.
 
+>This is **not** a full system emulator. The operating system of the head unit (Linux
+>kernel, drivers and root file system) does **not** run here.
+
 No car required. No physical head unit required for development. And, most importantly, a much safer place to catch mistakes before they have a chance to brick your device.
 
 ***Emulation cannot guarantee that modified firmware will work on real hardware. Differences in timing, hardware behavior and simulated peripherals may still cause problems after flashing. Always keep a known-good firmware image and a recovery plan.***
