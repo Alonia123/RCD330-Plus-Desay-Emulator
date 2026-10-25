@@ -9,8 +9,10 @@
 # Variables
 #-----------------------------------------------------------------------------------
 
-SRC="$1"
+SRC="${1:-$(cd "$(dirname "$0")" && pwd)}"
 B=/home/ubuntu/mib2emu
+
+SOURCE_FILE=$B/scripts/.source-folder
 
 if [ ! -d "$SRC" ]
 then
@@ -45,5 +47,8 @@ cp $B/scripts/*.ini $B/sysroot/opt/mib2/
 cp $B/scripts/*.sh $B/sysroot/opt/mib2/
 cp $B/scripts/*.py $B/sysroot/opt/mib2/ 2>/dev/null
 
+echo "$SRC" > $SOURCE_FILE
+
 echo -e "\e[92m [Info]: deploy finished ($(files | wc -l) files) \e[97m"
 true
+
