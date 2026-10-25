@@ -48,4 +48,4 @@ step "9/9 audio"                  $S/setup-audio.sh
 
 echo
 echo -e '\e[92m [Info]: installation finished. Start the emulator in an own PowerShell window: \e[97m'
-echo -e '\e[92m         wsl -d Ubuntu -u root -- /home/ubuntu/mib2emu/scripts/emu_main.sh \e[97m'
+echo -e '\e[92m         wsl -d RCD330-Plus-Desay-Emulator -u root -- /home/ubuntu/mib2emu/scripts/emu_main.sh \e[97m'

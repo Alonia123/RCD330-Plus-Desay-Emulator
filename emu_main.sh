@@ -3,7 +3,7 @@
 # Project: RCD330-Plus Desay Emulator (Chroot)
 #**********************************************************
 #
-# Usage (PowerShell): wsl -d Ubuntu -u root -- /home/ubuntu/mib2emu/scripts/emu_main.sh
+# Usage (PowerShell): wsl -d RCD330-Plus-Desay-Emulator -u root -- /home/ubuntu/mib2emu/scripts/emu_main.sh
 #
 
 #-----------------------------------------------------------------------------------

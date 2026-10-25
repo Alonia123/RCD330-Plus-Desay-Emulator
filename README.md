@@ -36,7 +36,10 @@ No car required. No physical head unit required for development. And, most impor
 ## Requirements
 
 - Windows with **WSL2** and **WSLg**
-- **Ubuntu 22.04** in WSL
+- **Ubuntu 22.04** in WSL, installed under the name `RCD330-Plus-Desay-Emulator`:
+  ```powershell
+  wsl --install Ubuntu-22.04 --name RCD330-Plus-Desay-Emulator
+  ```
 - A **file system dump** of the head unit (6RD 035 187B_TR7247_71_SW0317_Desay (2020.03.03))
 
 ---
@@ -118,10 +121,10 @@ and execute as root inside WSL:
 
 ```powershell
 # Start – in a SEPARATE PowerShell window that stays open
-wsl -d Ubuntu -u root -- /home/ubuntu/mib2emu/scripts/run-emu.sh all
+wsl -d RCD330-Plus-Desay-Emulator -u root -- /home/ubuntu/mib2emu/scripts/run-emu.sh all
 
 # Stop – Ctrl+C in the start window, or from another window:
-wsl -d Ubuntu -u root -- /home/ubuntu/mib2emu/scripts/stop-emu.sh
+wsl -d RCD330-Plus-Desay-Emulator -u root -- /home/ubuntu/mib2emu/scripts/stop-emu.sh
 ```
 
 ```powershell
