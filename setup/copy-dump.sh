@@ -13,6 +13,12 @@ SOURCE="$1"
 
 # Windows path -> WSL path
 case "$SOURCE" in
+    [A-Za-z]:[!/\\]*)
+        # "C:Users..." -> the backslashes got lost on the way from PowerShell
+        echo -e "\e[0;31m [Error]: path without separators: $SOURCE \e[97m"
+        echo -e '\e[0;31m         use / instead of \ (e.g. "C:/Users/<name>/dump") or a WSL path (/mnt/c/...) \e[97m'
+        exit 1
+        ;;
     [A-Za-z]:*)
         SOURCE=$(wslpath -u "$SOURCE")
         ;;

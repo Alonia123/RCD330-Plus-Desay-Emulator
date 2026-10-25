@@ -8,7 +8,7 @@ set -e
 #-----------------------------------------------------------------------------------
 # Packages
 #   qemu-user-static, binfmt-support     -> run ARM programs
-#   debootstrap, debian-archive-keyring  -> create the Debian sysroot
+#   debootstrap, wget, gpg               -> create the Debian sysroot (keys from debian.org)
 #   gcc-arm-linux-gnueabihf              -> build shim + GL client (ARM), readelf for build-rootfs.sh
 #   gcc, libegl-dev, libgles-dev,
 #   libegl-mesa0, libgl1-mesa-dri        -> build and run the GL server (Mesa on the PC)
@@ -18,7 +18,7 @@ set -e
 #   xxd                                  -> patch-emu.sh
 #-----------------------------------------------------------------------------------
 
-PACKAGES="qemu-user-static binfmt-support debootstrap debian-archive-keyring
+PACKAGES="qemu-user-static binfmt-support debootstrap wget gpg
 gcc-arm-linux-gnueabihf gcc libegl-dev libgles-dev libegl-mesa0 libgl1-mesa-dri
 python3 pulseaudio-utils dosfstools ffmpeg xxd"
 

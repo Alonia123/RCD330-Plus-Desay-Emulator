@@ -5,6 +5,7 @@ RCD330-Plus Desay emulator for WSL2 (qemu-user chroot, GL forwarding, MCU/CAN si
 > This repository does **not** contain any firmware.
 > The firmware and the file system dump are
 > copyrighted, so you'll need a dump of your own device.
+> This project is not affiliated with Volkswagen or Desay SV.
 
 The main goal is firmware development and testing in a controlled environment.
 Whether you're experimenting with system services, changing application behavior,
@@ -25,6 +26,7 @@ No car required. No physical head unit required for development. And, most impor
 - [Single commands](#single-commands)
 - [CAN Emulation](#can-emulation)
 - [Emulate USB-Stick](#emulate-usb-stick)
+- [License](#license)
 
 ---
 
@@ -72,7 +74,7 @@ When everything is done, you'll find this in WSL under `/home/ubuntu/mib2emu/`:
 
 | Path | Content |
 |---|---|
-| `scripts/` | a copy of this repository (flat, see [Making changes](#making-changes)) |
+| `scripts/` | a copy of this repository (flat) |
 | `dump/` | a copy of the device dump |
 | `sysroot/` | the runtime root: Debian bookworm armhf, with /svp and /storage from the dump on top |
 
@@ -195,4 +197,10 @@ The coding is message `0x7361` with 18 bytes:
 ```
 
 Give it 30 to 60 seconds to read the stick ("Loading USB").
+
 ---
+
+## License
+
+The code in this repository is released under the [MIT License](LICENSE).
+This does not apply to the firmware of the head unit, which is not part of this repository.
